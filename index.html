@@ -189,12 +189,39 @@
   <div class="loader"></div>
 </div>
 <script>
-      var fadeTarget = document.getElementById("loading");
-      var body = document.getElementById("body");
-body.style.overflow = "hidden";
-body.style.width = "100vw";
-body.style.height = "100vh";
-fadeTarget.style.display = "flex";
+  var fadeTarget = document.getElementById("loading");
+  var body = document.getElementById("body");
+  var tmrReady = setInterval(isPageFullyLoaded, 50);
+
+  //Si javascript está activado, se ponen los siguientes estilos
+  body.style.overflow = "hidden";
+  body.style.width = "100vw";
+  body.style.height = "100vh";
+  fadeTarget.style.display = "flex";
+
+  //Lo siguiente hace que el loader desaparezca
+  function isPageFullyLoaded() {
+      if (document.readyState == "complete") {
+          fadeTarget = document.getElementById("loading");
+          fadeTarget.style.display = "flex";
+          fadeEffect = setInterval(function () {
+              if (!fadeTarget.style.opacity) {
+                  fadeTarget.style.opacity = 1;
+              }
+              if (fadeTarget.style.opacity > 0) {
+                  fadeTarget.style.opacity -= 0.1;
+              }
+              else {
+                  clearInterval(fadeEffect);
+                  fadeTarget.style.display = "none";
+              }
+              if (fadeTarget.style.opacity < 1){
+              body.style.overflowY = "scroll"; //Si en la página no se hace scroll, cambiar scroll por hidden
+              }
+          }, 40);
+          clearInterval(tmrReady);
+      }
+  }
 </script>
 
   <header>
@@ -1136,32 +1163,7 @@ fadeTarget.style.display = "flex";
 
 
 
-  <script>
-     var tmrReady = setInterval(isPageFullyLoaded, 50);
-     var body = document.getElementById("body");
 
-    function isPageFullyLoaded() {
-        if (document.readyState == "complete") {
-    fadeTarget = document.getElementById("loading");
-fadeTarget.style.display = "flex";
-    fadeEffect = setInterval(function () {
-        if (!fadeTarget.style.opacity) {
-            fadeTarget.style.opacity = 1;
-        }
-        if (fadeTarget.style.opacity > 0) {
-            fadeTarget.style.opacity -= 0.1;
-            body.style.overflowY = "scroll"; 
-        } else {
-            clearInterval(fadeEffect);
-            fadeTarget.style.display = "none";
-            body.style.overflowY = "scroll"; 
-        }
-    },40);
-            clearInterval(tmrReady);
-     }
- }
-
-  </script>
 </body>
 
 </html>
