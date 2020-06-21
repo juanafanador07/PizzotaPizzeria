@@ -146,43 +146,56 @@
 
 
 <style>
-.loading{
+  .loading {
     display: none;
     width: 100%;
     height: 100%;
     margin: 0;
-    border:0;
+    border: 0;
     top: 0;
     left: 0;
-  position: fixed;
-    background-color:#fff; 
+    position: fixed;
+    background-color: #fff;
     z-index: 9999999;
     align-items: center;
   }
 
-@media (max-width: 768px){.loader{width:20vw;height:20vw;}}
-@media (min-width: 769px){.loader{width:5vw;height:5vw;}}
-.loader {
+  @media (max-width: 768px) {
+    .loader {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .loader {
+      width: 5vw;
+      height: 5vw;
+    }
+  }
+
+  .loader {
     -webkit-animation: loader .8s infinite linear;
     animation: loader .8s infinite linear;
-    border: 4px solid #f69c10;
+    border: 0.250em solid #f69c10;
     border-right-color: transparent;
     border-radius: 50%;
     position: relative;
     display: block;
     margin: 0 auto;
-}
-@keyframes loader {
-    0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0)
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg)
-    }
-}
+  }
 
+  @keyframes loader {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0)
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg)
+    }
+  }
 </style>
 </head>
 
@@ -194,34 +207,32 @@
     var fadeTarget = document.getElementById("loading");
     var body = document.getElementById("body");
     var tmrReady = setInterval(isPageFullyLoaded, 50);
-  
+
     //Si javascript está activado, se ponen los siguientes estilos
-    body.style.overflow = "hidden";
+    body.style.overflowY = "hidden";
     body.style.height = "100vh";
     fadeTarget.style.display = "flex";
-  
+
     //Lo siguiente hace que el loader desaparezca
     function isPageFullyLoaded() {
-        if (document.readyState == "complete") {
-            fadeTarget = document.getElementById("loading");
-            fadeTarget.style.display = "flex";
-            fadeEffect = setInterval(function () {
-                if (!fadeTarget.style.opacity) {
-                    fadeTarget.style.opacity = 1;
-                }
-                if (fadeTarget.style.opacity > 0) {
-                    fadeTarget.style.opacity -= 0.1;
-                }
-                else {
-                    clearInterval(fadeEffect);
-                    fadeTarget.style.display = "none";
-                }
-                if (fadeTarget.style.opacity < 1){
-                body.style.overflowY = "scroll"; //Si en la página no se hace scroll, cambiar scroll por hidden
-                }
-            }, 40);
-            clearInterval(tmrReady);
-        }
+      if (document.readyState == "complete") {
+        fadeEffect = setInterval(function () {
+          if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+          }
+          if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+          } else {
+            clearInterval(fadeEffect);
+            fadeTarget.style.display = "none";
+          }
+          if (fadeTarget.style.opacity < 1) {
+            body.style.overflowY = "auto";
+            body.style.height = "auto";
+          }
+        }, 40);
+        clearInterval(tmrReady);
+      }
     }
   </script>
 
@@ -315,7 +326,7 @@
 
 
 
-  <a  href="assets/img/original/frente.jpg" class="glightbox" data-gallery="gallery1" aria-label="Nuestro punto de venta">
+  <a  href="assets/img/original/frente.jpg" class="glightbox" data-gallery="gallery0" aria-label="Nuestro punto de venta">
     <picture>
       <source srcset="assets/img/3840px+/frente.jpg" media="(min-width: 3840px)">
       <source srcset="assets/img/2048px-3839px/frente.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -700,7 +711,7 @@
     <div class="gallery" data-cues="slideInLeft" data-group="images">
 
       <div class="gallery-container">
-        <a href="assets/img/original/001.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 1">
+        <a href="assets/img/original/001.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 1">
           <picture>
             <source srcset="assets/img/3840px+/0001.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0001.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -718,7 +729,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/002.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 2">
+        <a href="assets/img/original/002.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 2">
           <picture>
             <source srcset="assets/img/3840px+/0002.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0002.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -736,7 +747,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/003.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 3">
+        <a href="assets/img/original/003.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 3">
           <picture>
             <source srcset="assets/img/3840px+/0003.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0003.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -754,7 +765,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/004.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 4">
+        <a href="assets/img/original/004.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 4">
           <picture>
             <source srcset="assets/img/3840px+/0004.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0004.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -772,7 +783,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/005.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 5">
+        <a href="assets/img/original/005.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 5">
           <picture>
             <source srcset="assets/img/3840px+/0005.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0005.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -790,7 +801,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/006.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 6">
+        <a href="assets/img/original/006.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 6">
           <picture>
             <source srcset="assets/img/3840px+/0006.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0006.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -808,7 +819,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/007.jpg" class="glightbox" data-gallery="gallery2"
+        <a href="assets/img/original/007.jpg" class="glightbox" data-gallery="gallery1"
         aria-label="Imagen 7">
           <picture>
             <source srcset="assets/img/3840px+/0007.jpg" media="(min-width: 3840px)">
@@ -827,7 +838,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/008.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 8">
+        <a href="assets/img/original/008.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 8">
           <picture>
             <source srcset="assets/img/3840px+/0008.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0008.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -845,7 +856,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/009.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 9">
+        <a href="assets/img/original/009.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 9">
           <picture>
             <source srcset="assets/img/3840px+/0009.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0009.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -863,7 +874,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/010.jpg" class="glightbox" data-gallery="gallery2"
+        <a href="assets/img/original/010.jpg" class="glightbox" data-gallery="gallery1"
         aria-label="Imagen 10">
           <picture>
             <source srcset="assets/img/3840px+/0010.jpg" media="(min-width: 3840px)">
@@ -882,7 +893,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/011.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 11">
+        <a href="assets/img/original/011.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 11">
           <picture>
             <source srcset="assets/img/3840px+/0011.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0011.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -900,7 +911,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/012.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 12">
+        <a href="assets/img/original/012.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 12">
           <picture>
             <source srcset="assets/img/3840px+/0012.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0012.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -918,7 +929,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/013.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 13">
+        <a href="assets/img/original/013.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 13">
           <picture>
             <source srcset="assets/img/3840px+/0013.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0013.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -936,7 +947,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/014.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 14">
+        <a href="assets/img/original/014.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 14">
           <picture>
             <source srcset="assets/img/3840px+/0014.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0014.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -954,7 +965,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/015.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 15">
+        <a href="assets/img/original/015.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 15">
           <picture>
             <source srcset="assets/img/3840px+/0015.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0015.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -972,7 +983,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/016.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 16">
+        <a href="assets/img/original/016.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 16">
           <picture>
             <source srcset="assets/img/3840px+/0016.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0016.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -990,7 +1001,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/017.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 17">
+        <a href="assets/img/original/017.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 17">
           <picture>
             <source srcset="assets/img/3840px+/0017.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0017.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -1008,7 +1019,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/018.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 18">
+        <a href="assets/img/original/018.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 18">
           <picture>
             <source srcset="assets/img/3840px+/0018.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0018.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -1026,7 +1037,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/019.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 19">
+        <a href="assets/img/original/019.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 19">
           <picture>
             <source srcset="assets/img/3840px+/0019.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0019.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -1044,7 +1055,7 @@
 
 
       <div class="gallery-container">
-        <a href="assets/img/original/020.jpg" class="glightbox" data-gallery="gallery2" aria-label="Imagen 20">
+        <a href="assets/img/original/020.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 20">
           <picture>
             <source srcset="assets/img/3840px+/0020.jpg" media="(min-width: 3840px)">
             <source srcset="assets/img/2048px-3839px/0020.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -1157,8 +1168,15 @@
 
   <script>
     const lightbox = GLightbox({
-  loop: true,
-  });
+      loop: true,
+      svg: {
+        
+        
+                close: '<svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320 512" xml:space="preserve"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"></path></svg>',
+                next: '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-chevron-right fa-w-8 fa-fw fa-2x"><path fill="#fff" d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z"></path></svg>',
+                prev: '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-chevron-left fa-w-8 fa-3x"><path fill="#fff" d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z"></path></svg>'
+            },
+    })
   </script>
 
 

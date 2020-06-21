@@ -480,7 +480,7 @@ header {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    -webkit-align-items: center;
+    -webkit-align-itrems: center;
     -moz-box-align: center;
     align-items: center;
     -webkit-transform: translate3d(0, 0, 0);
@@ -503,7 +503,7 @@ header {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    -webkit-align-items: center;
+    -webkit-align-itrems: center;
     -moz-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
@@ -587,7 +587,7 @@ header {
 .gslide-image {
     -webkit-box-align: center;
     -ms-flex-align: center;
-    -webkit-align-items: center;
+    -webkit-align-itrems: center;
     -moz-box-align: center;
     align-items: center
 }
@@ -691,7 +691,7 @@ header {
 }
 
 .gslide-inline .ginlined-content {
-    padding: 20px;
+    padding: 1.250rem;
     width: 100%
 }
 
@@ -765,7 +765,7 @@ header {
 }
 
 .gslide-description p {
-    margin-bottom: 12px
+    margin-bottom: 0.750rem
 }
 
 .gslide-description p::last-child {
@@ -781,8 +781,8 @@ header {
     width: 100%;
     background: 0 0;
     position: absolute;
-    bottom: 15px;
-    padding: 19px 11px;
+    bottom: 0.938rem;
+    padding: 1.188rem 0.688rem;
     max-width: 100vw;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
@@ -801,12 +801,12 @@ header {
     -o-transition: opacity .3s linear;
     -moz-transition: opacity .3s linear;
     transition: opacity .3s linear;
-    padding-bottom: 50px
+    padding-bottom: 3.125rem
 }
 
 .glightbox-mobile .glightbox-container .gslide-title {
     color: #fff;
-    font-size: 1em
+    font-size: 1rem
 }
 
 .glightbox-mobile .glightbox-container .gslide-desc {
@@ -840,7 +840,7 @@ header {
 }
 
 .gdesc-open .gdesc-inner {
-    padding-bottom: 30px
+    padding-bottom: 1.875rem
 }
 
 .gdesc-closed .gslide-media {
@@ -875,13 +875,13 @@ header {
 }
 
 .gloader {
-    height: 25px;
-    width: 25px;
+    height: 1.563rem;
+    width: 1.563rem;
     -webkit-animation: lightboxLoader .8s infinite linear;
     -moz-animation: lightboxLoader .8s infinite linear;
     -o-animation: lightboxLoader .8s infinite linear;
     animation: lightboxLoader .8s infinite linear;
-    border: 2px solid #fff;
+    border: 0.125rem solid #fff;
     border-right-color: transparent;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -915,8 +915,8 @@ header {
     background-repeat: no-repeat;
     z-index: 99999;
     cursor: pointer;
-    width: 26px;
-    height: 44px;
+    width: 1.625rem;
+    height: 2.750rem;
     display: block;
     background-position: 0 0;
     border: none
@@ -959,25 +959,25 @@ iframe.wait-autoplay {
 
 .glightbox-clean .gdesc-inner,
 .glightbox-modern .gdesc-inner {
-    padding: 22px 20px
+    padding: 1.375rem 1.250rem
 }
 
 .glightbox-clean .gslide-title,
 .glightbox-modern .gslide-title {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 400;
     font-family: arial;
     color: #000;
-    margin-bottom: 19px;
-    line-height: 1.4em
+    margin-bottom: 1.188rem;
+    line-height: 1.4rem
 }
 
 .glightbox-clean .gslide-desc,
 .glightbox-modern .gslide-desc {
-    font-size: .86em;
+    font-size: .86rem;
     margin-bottom: 0;
     font-family: arial;
-    line-height: 1.4em
+    line-height: 1.4rem
 }
 
 .glightbox-clean .gslide-video,
@@ -1004,33 +1004,33 @@ iframe.wait-autoplay {
 .glightbox-modern .gprev {
     position: absolute;
     top: -100%;
-    left: 30px;
-    width: 40px;
-    height: 56px
+    left: 1.875rem;
+    width: 2.250rem;
+    height: 3rem
 }
 
 .glightbox-clean .gnext,
 .glightbox-modern .gnext {
     position: absolute;
     top: -100%;
-    right: 30px;
-    width: 40px;
-    height: 56px
+    right: 1.875rem;
+    width: 2.250rem;
+    height: 3rem
 }
 
 .glightbox-clean .gclose,
 .glightbox-modern .gclose {
-    width: 35px;
-    height: 35px;
-    top: 15px;
-    right: 10px;
+    width: 2rem;
+    height: 2rem;
+    top: 0.938rem;
+    right: 0.625rem;
     position: absolute;
-    background-position: -59px 2px
+    background-position: -3.688rem 0.125rem
 }
 
 .glightbox-clean .gclose svg,
 .glightbox-modern .gclose svg {
-    width: 25px;
+    width: 1.563rem;
 }
 
 .gfadeIn {
@@ -1710,7 +1710,7 @@ iframe.wait-autoplay {
 
     .glightbox-clean .gclose,
     .glightbox-modern .gclose {
-        right: 20px
+        right: 1.250rem
     }
 }
 
@@ -1719,7 +1719,6 @@ iframe.wait-autoplay {
         background: #000
     }
 }
-
 /*-----------Estilos Footer----------*/
 
 footer {
@@ -2757,67 +2756,67 @@ footer {
 /*Texto*/
 
 @media (max-width: 1399px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 16px;
     }
 }
 
 @media (min-width: 1400px) and (max-width: 1599px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 18px;
     }
 }
 
 @media (min-width: 1600px) and (max-width: 1899px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 22px;
     }
 }
 
 @media (min-width: 1900px) and (max-width: 2199px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 26px;
     }
 }
 
 @media (min-width: 2200px) and (max-width: 2499px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 28px;
     }
 }
 
 @media (min-width: 2500px) and (max-width: 2799px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 32px;
     }
 }
 
 @media (min-width: 2800px) and (max-width: 3099px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 36px;
     }
 }
 
 @media (min-width: 3100px) and (max-width: 3399px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 40px;
     }
 }
 
 @media (min-width: 3400px) and (max-width: 3699px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 44px;
     }
 }
 
 @media (min-width: 3700px) and (max-width: 3999px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 48px;
     }
 }
 
 @media (min-width: 4000px) and (orientation: landscape) {
-    body {
+    body, html {
         font-size: 52px;
     }
 }
@@ -2826,61 +2825,61 @@ footer {
 
 
 @media (min-width: 300px) and (max-width: 399px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 15px;
     }
 }
 
 @media (min-width: 400px) and (max-width: 499px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 22px;
     }
 }
 
 @media (min-width: 500px) and (max-width: 599px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 28px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 699px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 34px;
     }
 }
 
 @media (min-width: 700px) and (max-width: 799px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 40px;
     }
 }
 
 @media (min-width: 800px) and (max-width: 999px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 46px;
     }
 }
 
 @media (min-width: 1000px) and (max-width: 1399px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 58px;
     }
 }
 
 @media (min-width: 1400px) and (max-width: 1799px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 68px;
     }
 }
 
 @media (min-width: 1800px) and (max-width: 2599px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 90px;
     }
 }
 
 @media (min-width: 2600px) and (orientation: portrait) {
-    body {
+    body, html {
         font-size: 140px;
     }
 }
