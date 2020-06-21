@@ -143,6 +143,8 @@
 
   <link rel="stylesheet" href="assets/estilos.css">
 
+
+
 <style>
 .loading{
     display: none;
@@ -185,44 +187,43 @@
 </head>
 
 <body id="body">
-<div id="loading" class="loading">
-  <div class="loader"></div>
-</div>
-<script>
-  var fadeTarget = document.getElementById("loading");
-  var body = document.getElementById("body");
-  var tmrReady = setInterval(isPageFullyLoaded, 50);
-
-  //Si javascript está activado, se ponen los siguientes estilos
-  body.style.overflow = "hidden";
-  body.style.width = "100vw";
-  body.style.height = "100vh";
-  fadeTarget.style.display = "flex";
-
-  //Lo siguiente hace que el loader desaparezca
-  function isPageFullyLoaded() {
-      if (document.readyState == "complete") {
-          fadeTarget = document.getElementById("loading");
-          fadeTarget.style.display = "flex";
-          fadeEffect = setInterval(function () {
-              if (!fadeTarget.style.opacity) {
-                  fadeTarget.style.opacity = 1;
-              }
-              if (fadeTarget.style.opacity > 0) {
-                  fadeTarget.style.opacity -= 0.1;
-              }
-              else {
-                  clearInterval(fadeEffect);
-                  fadeTarget.style.display = "none";
-              }
-              if (fadeTarget.style.opacity < 1){
-              body.style.overflowY = "scroll"; //Si en la página no se hace scroll, cambiar scroll por hidden
-              }
-          }, 40);
-          clearInterval(tmrReady);
-      }
-  }
-</script>
+  <div id="loading" class="loading">
+    <div class="loader"></div>
+  </div>
+  <script>
+    var fadeTarget = document.getElementById("loading");
+    var body = document.getElementById("body");
+    var tmrReady = setInterval(isPageFullyLoaded, 50);
+  
+    //Si javascript está activado, se ponen los siguientes estilos
+    body.style.overflow = "hidden";
+    body.style.height = "100vh";
+    fadeTarget.style.display = "flex";
+  
+    //Lo siguiente hace que el loader desaparezca
+    function isPageFullyLoaded() {
+        if (document.readyState == "complete") {
+            fadeTarget = document.getElementById("loading");
+            fadeTarget.style.display = "flex";
+            fadeEffect = setInterval(function () {
+                if (!fadeTarget.style.opacity) {
+                    fadeTarget.style.opacity = 1;
+                }
+                if (fadeTarget.style.opacity > 0) {
+                    fadeTarget.style.opacity -= 0.1;
+                }
+                else {
+                    clearInterval(fadeEffect);
+                    fadeTarget.style.display = "none";
+                }
+                if (fadeTarget.style.opacity < 1){
+                body.style.overflowY = "scroll"; //Si en la página no se hace scroll, cambiar scroll por hidden
+                }
+            }, 40);
+            clearInterval(tmrReady);
+        }
+    }
+  </script>
 
   <header>
     <div class="header-logo-container">
