@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <!-- Sitio Web Creado por Juan David Afanador -->
@@ -25,8 +26,8 @@
   https://raw.githubusercontent.com/futape/lazyembed/master/LICENSE
   -->
   <!--
-  GLightbox v2.0.6
-  Glightbox is a pure javascript lightbox. It can display images, iframes, inline content and videos with optional autoplay for YouTube, Vimeo and even self hosted videos.
+  glightbox v3.0.0
+  glightbox is a pure javascript lightbox. It can display images, iframes, inline content and videos with optional autoplay for YouTube, Vimeo and even self hosted videos.
   https://github.com/biati-digital/glightbox
 
   Copyright 2018 MC Studios
@@ -39,23 +40,26 @@
   Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
   License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1,Code: MIT License)
   -->
- <noscript>
-  <style>
-    .mapa-container{
-    display:none;
-    }
-    #datos-container{
-    width: 100%;
-    }
-  </style>
- </noscript>
+  <noscript>
+    <style>
+      .mapa-container {
+        display: none;
+      }
+
+      #datos-container {
+        width: 100%;
+      }
+    </style>
+  </noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="pizzota, pizzería, cúcuta, cucuta, pizzeria, comida">
-  <meta name="description" content="¿Buscas un lugar para comer en Cúcuta? ¡Ven a comer con tu familia o amigos a Pizzota Pizzería! Los mejores en comidas rápidas de la ciudad.">
+  <meta name="description"
+    content="¿Buscas un lugar para comer en Cúcuta? ¡Ven a comer con tu familia o amigos a Pizzota Pizzería! Los mejores en comidas rápidas de la ciudad.">
   <meta property="og:title" content="Pizzota Pizzería">
   <meta property="og:site_name" content="Pizzota Pizzería">
   <meta property="og:url" content="https://pizzotapizzeria.imfast.io/">
-  <meta property="og:description" content="¿Buscas un lugar para comer en Cúcuta? ¡Ven a comer con tu familia o amigos a Pizzota Pizzería! Los mejores en comidas rápidas de la ciudad.">
+  <meta property="og:description"
+    content="¿Buscas un lugar para comer en Cúcuta? ¡Ven a comer con tu familia o amigos a Pizzota Pizzería! Los mejores en comidas rápidas de la ciudad.">
   <meta property="og:type" content="restaurant">
   <meta property="og:image" content="https://pizzotapizzeria.imfast.io/assets/img/original/logo.png">
   <link rel="canonical" href="https://pizzotapizzeria.imfast.io" />
@@ -68,11 +72,11 @@
       "logo": "https://pizzotapizzeria.imfast.io/assets/img/original/logo.png",
       "image": "https://pizzotapizzeria.imfast.io/assets/img/original/frente.jpg",
       "description": "¿Buscas un lugar para comer en Cúcuta? ¡Ven a comer con tu familia o amigos a Pizzota Pizzería! Los mejores en comidas rápidas de la ciudad.",
-      "sameAs" : [
-       "https://www.facebook.com/pizzotapizzeria",
-       "https://www.instagram.com/lapizzota/"
-       ],
-    "address": {
+      "sameAs": [
+        "https://www.facebook.com/pizzotapizzeria",
+        "https://www.instagram.com/lapizzota/"
+      ],
+      "address": {
         "@type": "PostalAddress",
         "streetAddress": "Calle 13 #48-02 Barrio Antonia Santos",
         "addressLocality": "Cúcuta",
@@ -94,7 +98,6 @@
       }
     }
   </script>
-
 
 
 
@@ -145,58 +148,59 @@
 
 
 
-<style>
-  .loading {
-    display: none;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    border: 0;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: #fff;
-    z-index: 9999999;
-    align-items: center;
-  }
+  <style>
+    .loading {
+      display: none;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border: 0;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background-color: #fff;
+      z-index: 9999999;
+      align-items: center;
+    }
 
-  @media (max-width: 768px) {
+    @media (max-width: 767px),
+    (orientation: portrait) {
+      .loader {
+        width: 20vw;
+        height: 20vw;
+      }
+    }
+
+    @media (min-width: 768px) and (orientation: landscape) {
+      .loader {
+        width: 5vw;
+        height: 5vw;
+      }
+    }
+
     .loader {
-      width: 20vw;
-      height: 20vw;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .loader {
-      width: 5vw;
-      height: 5vw;
-    }
-  }
-
-  .loader {
-    -webkit-animation: loader .8s infinite linear;
-    animation: loader .8s infinite linear;
-    border: 0.250em solid #f69c10;
-    border-right-color: transparent;
-    border-radius: 50%;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-  }
-
-  @keyframes loader {
-    0% {
-      -webkit-transform: rotate(0);
-      transform: rotate(0)
+      -webkit-animation: loader .8s infinite linear;
+      animation: loader .8s infinite linear;
+      border: 0.250em solid #f69c10;
+      border-right-color: transparent;
+      border-radius: 50%;
+      position: relative;
+      display: block;
+      margin: 0 auto;
     }
 
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg)
+    @keyframes loader {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+      }
     }
-  }
-</style>
+  </style>
 </head>
 
 <body id="body">
@@ -238,29 +242,42 @@
 
   <header>
     <div class="header-logo-container">
-             <picture>
-                <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
-                <img loading="lazy" class="header-logo-img" src="assets/img/3840px+/logo.png" alt="">
-              </picture>
+      <picture>
+        <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
+        <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
+        <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
+        <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
+        <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
+        <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
+        <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
+        <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
+        <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
+        <img loading="lazy" class="header-logo-img" src="assets/img/3840px+/logo.png" alt="">
+      </picture>
     </div>
     <div class="header-list-container">
 
-      <a href="https://www.google.com/maps/dir//Pizzota+Pizzer%C3%ADa/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e664fa4d5c5f9a5:0x66bf80ae33983e1a!2m2!1d-72.53819299999999!2d7.906236" rel = "noopener" target="_blank" class="header-link" aria-label="¿Cómo Llegar?">
-        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M502.61 233.32L278.68 9.39c-12.52-12.52-32.83-12.52-45.36 0L9.39 233.32c-12.52 12.53-12.52 32.83 0 45.36l223.93 223.93c12.52 12.53 32.83 12.53 45.36 0l223.93-223.93c12.52-12.53 12.52-32.83 0-45.36zm-100.98 12.56l-84.21 77.73c-5.12 4.73-13.43 1.1-13.43-5.88V264h-96v64c0 4.42-3.58 8-8 8h-32c-4.42 0-8-3.58-8-8v-80c0-17.67 14.33-32 32-32h112v-53.73c0-6.97 8.3-10.61 13.43-5.88l84.21 77.73c3.43 3.17 3.43 8.59 0 11.76z"></path></svg>
+      <a href="https://www.google.com/maps/dir//Pizzota+Pizzer%C3%ADa/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e664fa4d5c5f9a5:0x66bf80ae33983e1a!2m2!1d-72.53819299999999!2d7.906236"
+        rel="noopener" target="_blank" class="header-link" aria-label="¿Cómo Llegar?">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M502.61 233.32L278.68 9.39c-12.52-12.52-32.83-12.52-45.36 0L9.39 233.32c-12.52 12.53-12.52 32.83 0 45.36l223.93 223.93c12.52 12.53 32.83 12.53 45.36 0l223.93-223.93c12.52-12.53 12.52-32.83 0-45.36zm-100.98 12.56l-84.21 77.73c-5.12 4.73-13.43 1.1-13.43-5.88V264h-96v64c0 4.42-3.58 8-8 8h-32c-4.42 0-8-3.58-8-8v-80c0-17.67 14.33-32 32-32h112v-53.73c0-6.97 8.3-10.61 13.43-5.88l84.21 77.73c3.43 3.17 3.43 8.59 0 11.76z">
+          </path>
+        </svg>
         <span>¿Cómo Llegar?</span></a>
-      <a href="https://wa.me/573223549527" target="_blank" class="header-link" aria-label="Contáctanos" rel = "noopener">
-        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+      <a href="https://wa.me/573223549527" target="_blank" class="header-link" aria-label="Contáctanos" rel="noopener">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+          </path>
+        </svg>
         <span>Contáctanos</span></a>
-      <a href="tel:3223549527" class="header-link" aria-label="Llamar Ahora" rel = "noopener">
-        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>
+      <a href="tel:3223549527" class="header-link" aria-label="Llamar Ahora" rel="noopener">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z">
+          </path>
+        </svg>
         <span>Llamar Ahora</span></a>
 
     </div>
@@ -270,21 +287,22 @@
     <div class="bloque1">
       <div class="bloque1-texto">
         <h1>Pizzota Pizzería</h1>
-        <p class="desc">Ven a comer con tu familia o amigos a Pizzota Pizzería, los mejores en comidas rápidas de la ciudad.</p>
+        <p class="desc">Ven a comer con tu familia o amigos a Pizzota Pizzería, los mejores en comidas rápidas de la
+          ciudad.</p>
       </div>
       <div class="logo-container">
-             <picture>
-                <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/logo.png" alt="">
-              </picture>
+        <picture>
+          <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
+          <img loading="lazy" class="logo" src="assets/img/3840px+/logo.png" alt="">
+        </picture>
       </div>
     </div>
   </div>
@@ -293,13 +311,13 @@
 
   <div class="bloque2">
     <div class="datos-container" id="datos-container">
-      <hr/>
+      <hr />
       <div class="datos-titulo">
-        
+
         <h2>Comunícate con nosotros</h2>
-        
+
       </div>
-      <hr/>
+      <hr />
       <div class="direccion">
         <h3>Dirección</h3>
         <p>Calle 13 #48-02 Barrio Antonia Santos, Cúcuta, Colombia</p>
@@ -308,12 +326,15 @@
         <h3>Teléfono</h3>
         <p>322 3549527</p>
       </div>
-      <div class="borrar" style="margin:0"><hr/></div>
+      <div class="borrar" style="margin:0">
+        <hr />
+      </div>
     </div>
     <div class="mapa-container">
 
 
-      <div class="iframe-responsive" id="iframe-responsive"><iframe title="Ubicación" class="mapa-iframe" data-lazyembed data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcywKcxXeMZiMwLDcLgyEnNglcLOyB_qw&q=Pizzota%20C%C3%B9cuta&zoom=17"
+      <div class="iframe-responsive" id="iframe-responsive"><iframe title="Ubicación" class="mapa-iframe" data-lazyembed
+          data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcywKcxXeMZiMwLDcLgyEnNglcLOyB_qw&q=Pizzota%20C%C3%B9cuta&zoom=17"
           data-placeholder="assets/img/original/mapa.jpg" allowfullscreen></iframe>
 
 
@@ -326,7 +347,7 @@
 
 
 
-  <a  href="assets/img/original/frente.jpg" class="glightbox" data-gallery="gallery0" aria-label="Nuestro punto de venta">
+  <a href="assets/img/original/frente.jpg" class="glightbox" aria-label="Nuestro punto de venta">
     <picture>
       <source srcset="assets/img/3840px+/frente.jpg" media="(min-width: 3840px)">
       <source srcset="assets/img/2048px-3839px/frente.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -344,7 +365,9 @@
 
 
 
-  <div class="hr"><hr/></div>
+  <div class="hr">
+    <hr />
+  </div>
   <div class="bloque3">
     <div class="bloque3-titulo">
       <h2>Horario de Atención</h2>
@@ -353,16 +376,20 @@
       <p>Abrimos todos los Jueves, Viernes, Sábados, Domingos y Festivos desde las 6 pm hasta las 10 pm</p>
     </div>
   </div>
-  
+
 
 
 
   <div class="bloque4">
-    <div class="hr"><hr/></div>
+    <div class="hr">
+      <hr />
+    </div>
     <div>
       <h2>¿Qué ofrecemos? </h2>
     </div>
-    <div class="hr"><hr/></div>
+    <div class="hr">
+      <hr />
+    </div>
 
 
 
@@ -700,413 +727,435 @@
 
 
 
-  
-    <div class="hr"><hr/></div>
-    <div>
-      <h2>Galería</h2>
+
+  <div class="hr">
+    <hr />
+  </div>
+  <div>
+    <h2>Galería</h2>
+  </div>
+  <div class="hr">
+    <hr />
+  </div>
+
+
+  <div class="gallery">
+
+    <div class="gallery-container">
+      <a href="assets/img/original/001.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 1">
+        <picture>
+          <source srcset="assets/img/3840px+/0001.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0001.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0001.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0001.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0001.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0001.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0001.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0001.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0001.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0001.jpg" alt="">
+        </picture>
+      </a>
     </div>
-    <div class="hr"><hr/></div>
 
 
-    <div class="gallery" data-cues="slideInLeft" data-group="images">
-
-      <div class="gallery-container">
-        <a href="assets/img/original/001.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 1">
-          <picture>
-            <source srcset="assets/img/3840px+/0001.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0001.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0001.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0001.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0001.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0001.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0001.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0001.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0001.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0001.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/002.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 2">
-          <picture>
-            <source srcset="assets/img/3840px+/0002.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0002.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0002.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0002.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0002.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0002.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0002.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0002.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0002.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0002.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/003.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 3">
-          <picture>
-            <source srcset="assets/img/3840px+/0003.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0003.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0003.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0003.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0003.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0003.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0003.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0003.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0003.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0003.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/004.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 4">
-          <picture>
-            <source srcset="assets/img/3840px+/0004.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0004.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0004.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0004.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0004.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0004.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0004.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0004.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0004.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0004.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/005.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 5">
-          <picture>
-            <source srcset="assets/img/3840px+/0005.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0005.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0005.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0005.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0005.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0005.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0005.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0005.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0005.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0005.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/006.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 6">
-          <picture>
-            <source srcset="assets/img/3840px+/0006.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0006.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0006.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0006.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0006.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0006.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0006.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0006.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0006.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0006.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/007.jpg" class="glightbox" data-gallery="gallery1"
-        aria-label="Imagen 7">
-          <picture>
-            <source srcset="assets/img/3840px+/0007.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0007.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0007.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0007.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0007.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0007.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0007.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0007.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0007.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0007.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/008.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 8">
-          <picture>
-            <source srcset="assets/img/3840px+/0008.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0008.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0008.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0008.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0008.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0008.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0008.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0008.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0008.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0008.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/009.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 9">
-          <picture>
-            <source srcset="assets/img/3840px+/0009.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0009.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0009.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0009.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0009.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0009.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0009.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0009.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0009.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0009.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/010.jpg" class="glightbox" data-gallery="gallery1"
-        aria-label="Imagen 10">
-          <picture>
-            <source srcset="assets/img/3840px+/0010.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0010.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0010.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0010.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0010.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0010.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0010.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0010.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0010.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0010.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/011.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 11">
-          <picture>
-            <source srcset="assets/img/3840px+/0011.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0011.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0011.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0011.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0011.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0011.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0011.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0011.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0011.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0011.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/012.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 12">
-          <picture>
-            <source srcset="assets/img/3840px+/0012.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0012.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0012.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0012.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0012.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0012.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0012.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0012.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0012.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0012.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/013.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 13">
-          <picture>
-            <source srcset="assets/img/3840px+/0013.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0013.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0013.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0013.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0013.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0013.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0013.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0013.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0013.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0013.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/014.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 14">
-          <picture>
-            <source srcset="assets/img/3840px+/0014.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0014.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0014.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0014.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0014.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0014.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0014.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0014.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0014.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0014.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/015.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 15">
-          <picture>
-            <source srcset="assets/img/3840px+/0015.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0015.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0015.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0015.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0015.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0015.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0015.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0015.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0015.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0015.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/016.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 16">
-          <picture>
-            <source srcset="assets/img/3840px+/0016.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0016.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0016.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0016.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0016.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0016.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0016.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0016.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0016.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0016.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/017.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 17">
-          <picture>
-            <source srcset="assets/img/3840px+/0017.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0017.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0017.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0017.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0017.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0017.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0017.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0017.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0017.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0017.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/018.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 18">
-          <picture>
-            <source srcset="assets/img/3840px+/0018.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0018.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0018.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0018.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0018.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0018.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0018.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0018.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0018.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0018.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/019.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 19">
-          <picture>
-            <source srcset="assets/img/3840px+/0019.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0019.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0019.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0019.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0019.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0019.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0019.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0019.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0019.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0019.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-      <div class="gallery-container">
-        <a href="assets/img/original/020.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 20">
-          <picture>
-            <source srcset="assets/img/3840px+/0020.jpg" media="(min-width: 3840px)">
-            <source srcset="assets/img/2048px-3839px/0020.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-            <source srcset="assets/img/1920px-2047px/0020.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-            <source srcset="assets/img/1440px-1919px/0020.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-            <source srcset="assets/img/1024px-1439px/0020.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-            <source srcset="assets/img/768px-1023px/0020.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-            <source srcset="assets/img/425px-767px/0020.jpg" media="(min-width: 425px) and (max-width: 767px)">
-            <source srcset="assets/img/375px-424px/0020.jpg" media="(min-width: 375px) and (max-width: 424px)">
-            <source srcset="assets/img/374px-/0020.jpg" media="(max-width: 374px)">
-            <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0020.jpg" alt="">
-          </picture>
-        </a>
-      </div>
-
-
-
-
-
-
-
-
-
+    <div class="gallery-container">
+      <a href="assets/img/original/002.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 2">
+        <picture>
+          <source srcset="assets/img/3840px+/0002.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0002.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0002.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0002.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0002.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0002.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0002.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0002.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0002.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0002.jpg" alt="">
+        </picture>
+      </a>
     </div>
-    
 
-<div class="hr"><hr/></div>
+
+    <div class="gallery-container">
+      <a href="assets/img/original/003.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 3">
+        <picture>
+          <source srcset="assets/img/3840px+/0003.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0003.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0003.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0003.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0003.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0003.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0003.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0003.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0003.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0003.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/004.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 4">
+        <picture>
+          <source srcset="assets/img/3840px+/0004.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0004.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0004.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0004.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0004.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0004.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0004.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0004.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0004.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0004.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/005.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 5">
+        <picture>
+          <source srcset="assets/img/3840px+/0005.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0005.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0005.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0005.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0005.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0005.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0005.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0005.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0005.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0005.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/006.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 6">
+        <picture>
+          <source srcset="assets/img/3840px+/0006.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0006.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0006.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0006.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0006.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0006.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0006.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0006.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0006.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0006.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/007.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 7">
+        <picture>
+          <source srcset="assets/img/3840px+/0007.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0007.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0007.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0007.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0007.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0007.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0007.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0007.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0007.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0007.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/008.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 8">
+        <picture>
+          <source srcset="assets/img/3840px+/0008.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0008.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0008.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0008.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0008.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0008.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0008.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0008.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0008.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0008.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/009.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 9">
+        <picture>
+          <source srcset="assets/img/3840px+/0009.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0009.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0009.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0009.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0009.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0009.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0009.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0009.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0009.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0009.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/010.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 10">
+        <picture>
+          <source srcset="assets/img/3840px+/0010.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0010.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0010.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0010.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0010.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0010.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0010.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0010.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0010.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0010.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/011.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 11">
+        <picture>
+          <source srcset="assets/img/3840px+/0011.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0011.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0011.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0011.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0011.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0011.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0011.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0011.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0011.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0011.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/012.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 12">
+        <picture>
+          <source srcset="assets/img/3840px+/0012.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0012.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0012.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0012.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0012.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0012.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0012.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0012.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0012.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0012.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/013.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 13">
+        <picture>
+          <source srcset="assets/img/3840px+/0013.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0013.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0013.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0013.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0013.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0013.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0013.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0013.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0013.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0013.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/014.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 14">
+        <picture>
+          <source srcset="assets/img/3840px+/0014.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0014.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0014.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0014.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0014.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0014.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0014.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0014.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0014.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0014.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/015.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 15">
+        <picture>
+          <source srcset="assets/img/3840px+/0015.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0015.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0015.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0015.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0015.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0015.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0015.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0015.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0015.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0015.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/016.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 16">
+        <picture>
+          <source srcset="assets/img/3840px+/0016.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0016.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0016.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0016.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0016.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0016.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0016.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0016.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0016.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0016.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/017.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 17">
+        <picture>
+          <source srcset="assets/img/3840px+/0017.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0017.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0017.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0017.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0017.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0017.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0017.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0017.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0017.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0017.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/018.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 18">
+        <picture>
+          <source srcset="assets/img/3840px+/0018.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0018.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0018.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0018.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0018.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0018.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0018.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0018.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0018.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0018.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/019.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 19">
+        <picture>
+          <source srcset="assets/img/3840px+/0019.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0019.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0019.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0019.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0019.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0019.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0019.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0019.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0019.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0019.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+    <div class="gallery-container">
+      <a href="assets/img/original/020.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 20">
+        <picture>
+          <source srcset="assets/img/3840px+/0020.jpg" media="(min-width: 3840px)">
+          <source srcset="assets/img/2048px-3839px/0020.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
+          <source srcset="assets/img/1920px-2047px/0020.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
+          <source srcset="assets/img/1440px-1919px/0020.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
+          <source srcset="assets/img/1024px-1439px/0020.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
+          <source srcset="assets/img/768px-1023px/0020.jpg" media="(min-width: 786px) and (max-width: 1023px)">
+          <source srcset="assets/img/425px-767px/0020.jpg" media="(min-width: 425px) and (max-width: 767px)">
+          <source srcset="assets/img/375px-424px/0020.jpg" media="(min-width: 375px) and (max-width: 424px)">
+          <source srcset="assets/img/374px-/0020.jpg" media="(max-width: 374px)">
+          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0020.jpg" alt="">
+        </picture>
+      </a>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <div class="hr">
+    <hr />
+  </div>
 
 
   <footer>
 
     <div class="footer-logo-container">
-             <picture>
-                <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
-                <img loading="lazy" class="footer-logo-img" src="assets/img/3840px+/logo.png" alt="">
-              </picture>
+      <picture>
+        <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
+        <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
+        <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
+        <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
+        <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
+        <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
+        <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
+        <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
+        <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
+        <img loading="lazy" class="footer-logo-img" src="assets/img/3840px+/logo.png" alt="">
+      </picture>
 
     </div>
     <div class="footer-text">Pizzota Pizzería</div>
     <div class="footer-list-container">
-      <a href="https://www.facebook.com/pizzotapizzeria" target="_blank" rel = "noopener" class="footer-link facebook" aria-label="Facebook"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg></a>
-      <a href="https://www.instagram.com/lapizzota" target="_blank" rel = "noopener" class="footer-link instagram" aria-label="Instagram"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>
-      <a href="https://wa.me/573223549527" rel = "noopener" target="_blank" class="footer-link whatsapp" aria-label="Whatsapp"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg></a>
+      <a href="https://www.facebook.com/pizzotapizzeria" target="_blank" rel="noopener" class="footer-link facebook"
+        aria-label="Facebook"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512">
+          <path
+            d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
+          </path>
+        </svg></a>
+      <a href="https://www.instagram.com/lapizzota" target="_blank" rel="noopener" class="footer-link instagram"
+        aria-label="Instagram"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512">
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+          </path>
+        </svg></a>
+      <a href="https://wa.me/573223549527" rel="noopener" target="_blank" class="footer-link whatsapp"
+        aria-label="Whatsapp"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512">
+          <path
+            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+          </path>
+        </svg></a>
     </div>
 
   </footer>
@@ -1127,7 +1176,7 @@
         root: 'lazyembed iframe-container',
         overlay: 'lazyembed__overlay',
         text: 'lazyembed__text',
-         placeholder: 'lazyembed__placeholder',
+        placeholder: 'lazyembed__placeholder',
         embed: 'lazyembed__embed iframe'
       },
     });
@@ -1139,24 +1188,24 @@
 
   <script>
     new SimpleSlider('.slider-1', {
-       
-     autoplay: true,
-     
-    loop: true,
-    
-    
-      });
+
+      autoplay: true,
+
+      loop: true,
+
+
+    });
   </script>
 
   <script>
     new SimpleSlider('.slider-2', {
-       
-     autoplay: true,
-     
-    loop: true,
-    
-    
-      });
+
+      autoplay: true,
+
+      loop: true,
+
+
+    });
   </script>
 
 
@@ -1170,12 +1219,10 @@
     const lightbox = GLightbox({
       loop: true,
       svg: {
-        
-        
-                close: '<svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320 512" xml:space="preserve"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"></path></svg>',
-                next: '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-chevron-right fa-w-8 fa-fw fa-2x"><path fill="#fff" d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z"></path></svg>',
-                prev: '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-chevron-left fa-w-8 fa-3x"><path fill="#fff" d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z"></path></svg>'
-            },
+        close: '<svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320 512" xml:space="preserve"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"></path></svg>',
+        next: '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-chevron-right fa-w-8 fa-fw fa-2x"><path fill="#fff" d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z"></path></svg>',
+        prev: '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="svg-inline--fa fa-chevron-left fa-w-8 fa-3x"><path fill="#fff" d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z"></path></svg>'
+      },
     })
   </script>
 
