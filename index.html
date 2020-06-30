@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <!-- Sitio Web Creado por Juan David Afanador -->
@@ -41,7 +40,69 @@
   License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1,Code: MIT License)
   -->
   <noscript>
+    <div class="noscript">
+      <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path transform="translate(-100, 0)" fill="currentColor"
+          d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z">
+        </path>
+      </svg>
+      <p>Debes activar JavaScript en tu navegador visualizar esta página correctamente</p>
+    </div>
     <style>
+      @media (min-width: 768px) and (orientation: landscape) {
+        .noscript {
+          width: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -moz-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -moz-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          background-color: #f69c10;
+          border-top: 1px solid white;
+          font-family: 'Overpass', sans-serif;
+          color: white;
+          padding: 1em 0;
+          font-size: 1.25em;
+        }
+
+        .noscript svg {
+          height: 1.4em;
+          width: 2em;
+          margin-right: 1em;
+        }
+      }
+
+      @media (max-width: 767px),
+      (orientation: portrait) {
+        .noscript {
+          width: 90%;
+          background-color: #f69c10;
+          border-top: 1px solid white;
+          font-family: 'Overpass', sans-serif;
+          color: white;
+          padding: 1em 5%;
+          font-size: 1.25em;
+        }
+
+        .noscript svg {
+          float: left;
+          margin: 0.3em 0em 0.3em 0em;
+          height: 1.4em;
+          width: 2em;
+        }
+
+      }
+
       .mapa-container {
         display: none;
       }
@@ -98,111 +159,135 @@
       }
     }
   </script>
-
-
-
   <title>Pizzota Pizzería | Página Principal</title>
   <link rel="apple-touch-icon" sizes="57x57" href="assets/icon/apple-touch-icon-57x57-precomposed.png">
-
   <link rel="apple-touch-icon" sizes="60x60" href="assets/icon/apple-touch-icon-60x60-precomposed.png">
-
   <link rel="apple-touch-icon" sizes="72x72" href="assets/icon/apple-touch-icon-72x72-precomposed.png">
-
   <link rel="apple-touch-icon" sizes="76x76" href="assets/icon/apple-touch-icon-76x76-precomposed.png">
-
   <link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-touch-icon-114x114-precomposed.png">
-
   <link rel="apple-touch-icon" sizes="120x120" href="assets/icon/apple-touch-icon-120x120-precomposed.png">
-
   <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-touch-icon-144x144-precomposed.png">
-
   <link rel="apple-touch-icon" sizes="152x152" href="assets/icon/apple-touch-icon-152x152-precomposed.png">
-
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon-180x180-precomposed.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
-
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/android-chrome-192x192.png">
-
   <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
-
   <link rel="manifest" href="site.webmanifest">
-
   <link rel="mask-icon" href="assets/icon/safari-pinned-tab.svg" color="#353535">
-
   <link rel="shortcut icon" href="assets/icon/favicon.ico">
-
   <meta name="apple-mobile-web-app-title" content="Pizzota Pizzería">
-
   <meta name="application-name" content="Pizzota Pizzería">
-
   <meta name="msapplication-TileColor" content="#353535">
-
   <meta name="msapplication-TileImage" content="assets/icon/mstile-144x144.png">
-
   <meta name="msapplication-config" content="assets/icon/browserconfig.xml">
-
-  <meta name="theme-color" content="#353535">
-
-
+  <meta name="theme-color" content="#fff">
   <link rel="stylesheet" href="assets/estilos.css">
-
-
-
   <style>
     .loading {
-      display: none;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      border: 0;
-      top: 0;
-      left: 0;
-      position: fixed;
-      background-color: #fff;
-      z-index: 9999999;
-      align-items: center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #fff;
+    z-index: 9999999;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     }
 
     @media (max-width: 767px),
     (orientation: portrait) {
-      .loader {
-        width: 20vw;
-        height: 20vw;
-      }
+    .loader {
+    width: 20vw;
+    height: 20vw;
+    }
     }
 
     @media (min-width: 768px) and (orientation: landscape) {
-      .loader {
-        width: 5vw;
-        height: 5vw;
-      }
+    .loader {
+    width: 5vw;
+    height: 5vw;
+    }
     }
 
     .loader {
-      -webkit-animation: loader .8s infinite linear;
-      animation: loader .8s infinite linear;
-      border: 0.250em solid #f69c10;
-      border-right-color: transparent;
-      border-radius: 50%;
-      position: relative;
-      display: block;
-      margin: 0 auto;
+    -webkit-animation: loader .8s infinite linear;
+    -moz-animation: loader .8s infinite linear;
+    -o-animation: loader .8s infinite linear;
+    animation: loader .8s infinite linear;
+    border: 0.250em solid #f69c10;
+    border-right-color: transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    }
+
+    @-webkit-keyframes loader {
+    0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+    }
+
+    100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+    }
+    }
+
+    @-moz-keyframes loader {
+    0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0)
+    }
+
+    100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg)
+    }
+    }
+
+    @-o-keyframes loader {
+    0% {
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0)
+    }
+
+    100% {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg)
+    }
     }
 
     @keyframes loader {
-      0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0)
-      }
+    0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0)
+    }
 
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg)
-      }
+    100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg)
+    }
     }
   </style>
 </head>
-
 <body id="body">
   <div id="loading" class="loading">
     <div class="loader"></div>
@@ -211,12 +296,10 @@
     var fadeTarget = document.getElementById("loading");
     var body = document.getElementById("body");
     var tmrReady = setInterval(isPageFullyLoaded, 50);
-
     //Si javascript está activado, se ponen los siguientes estilos
     body.style.overflowY = "hidden";
     body.style.height = "100vh";
     fadeTarget.style.display = "flex";
-
     //Lo siguiente hace que el loader desaparezca
     function isPageFullyLoaded() {
       if (document.readyState == "complete") {
@@ -239,7 +322,6 @@
       }
     }
   </script>
-
   <header>
     <div class="header-logo-container">
       <picture>
@@ -256,7 +338,6 @@
       </picture>
     </div>
     <div class="header-list-container">
-
       <a href="https://www.google.com/maps/dir//Pizzota+Pizzer%C3%ADa/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e664fa4d5c5f9a5:0x66bf80ae33983e1a!2m2!1d-72.53819299999999!2d7.906236"
         rel="noopener" target="_blank" class="header-link" aria-label="¿Cómo Llegar?">
         <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -279,9 +360,7 @@
           </path>
         </svg>
         <span>Llamar Ahora</span></a>
-
     </div>
-
   </header>
   <div class="parallax">
     <div class="bloque1">
@@ -306,16 +385,11 @@
       </div>
     </div>
   </div>
-
-
-
   <div class="bloque2">
     <div class="datos-container" id="datos-container">
       <hr />
       <div class="datos-titulo">
-
         <h2>Comunícate con nosotros</h2>
-
       </div>
       <hr />
       <div class="direccion">
@@ -331,22 +405,11 @@
       </div>
     </div>
     <div class="mapa-container">
-
-
       <div class="iframe-responsive" id="iframe-responsive"><iframe title="Ubicación" class="mapa-iframe" data-lazyembed
           data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcywKcxXeMZiMwLDcLgyEnNglcLOyB_qw&q=Pizzota%20C%C3%B9cuta&zoom=17"
-          data-placeholder="assets/img/original/mapa.jpg" allowfullscreen></iframe>
-
-
-
-
-      </div>
+          data-placeholder="assets/img/original/mapa.jpg" allowfullscreen></iframe></div>
     </div>
   </div>
-
-
-
-
   <a href="assets/img/original/frente.jpg" class="glightbox" aria-label="Nuestro punto de venta">
     <picture>
       <source srcset="assets/img/3840px+/frente.jpg" media="(min-width: 3840px)">
@@ -361,10 +424,6 @@
       <img loading="lazy" class="frente-img" src="assets/img/3840px+/frente.jpg" alt="">
     </picture>
   </a>
-
-
-
-
   <div class="hr">
     <hr />
   </div>
@@ -376,10 +435,6 @@
       <p>Abrimos todos los Jueves, Viernes, Sábados, Domingos y Festivos desde las 6 pm hasta las 10 pm</p>
     </div>
   </div>
-
-
-
-
   <div class="bloque4">
     <div class="hr">
       <hr />
@@ -390,20 +445,11 @@
     <div class="hr">
       <hr />
     </div>
-
-
-
-
     <!-- Slider -->
     <div class="simple-slider slider-1 mobile-borrar">
-
       <div class="slider-wrapper">
-
         <!-- First slide -->
         <div class="slider-slide">
-
-
-
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
               <picture>
@@ -420,8 +466,6 @@
               </picture>
               <p>Pizzas</p>
             </div>
-
-
             <div class="slider-container-data slider-container-data-3">
               <picture>
                 <source srcset="assets/img/3840px+/02.jpg" media="(min-width: 3840px)">
@@ -437,8 +481,6 @@
               </picture>
               <p>Perros Calientes</p>
             </div>
-
-
             <div class="slider-container-data slider-container-data-2">
               <picture>
                 <source srcset="assets/img/3840px+/03.jpg" media="(min-width: 3840px)">
@@ -456,12 +498,8 @@
             </div>
           </div>
         </div>
-
         <!-- Second slide -->
         <div class="slider-slide">
-
-
-
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
               <picture>
@@ -478,8 +516,6 @@
               </picture>
               <p>Salchipapas</p>
             </div>
-
-
             <div class="slider-container-data slider-container-data-3">
               <picture>
                 <source srcset="assets/img/3840px+/05.jpg" media="(min-width: 3840px)">
@@ -495,8 +531,6 @@
               </picture>
               <p>Jugos Naturales</p>
             </div>
-
-
             <div class="slider-container-data slider-container-data-2">
               <picture>
                 <source srcset="assets/img/3840px+/06.jpg" media="(min-width: 3840px)">
@@ -513,45 +547,16 @@
               <p>Malteadas</p>
             </div>
           </div>
-
         </div>
-
-
-
       </div>
-
-
-
-
-
-      <!-- Buttons (Not required) -->
+      <!-- Botones Slider -->
       <div class="slider-btn slider-btn-prev"></div>
       <div class="slider-btn slider-btn-next"></div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Slider -->
     <div class="simple-slider slider-2 mobile-borrar">
-
       <div class="slider-wrapper">
-
         <div class="slider-slide">
-
-
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
               <picture>
@@ -570,11 +575,7 @@
             </div>
           </div>
         </div>
-
-
-
         <div class="slider-slide">
-
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
               <picture>
@@ -593,9 +594,6 @@
             </div>
           </div>
         </div>
-
-
-
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
@@ -615,10 +613,7 @@
             </div>
           </div>
         </div>
-
-
         <div class="slider-slide">
-
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
               <picture>
@@ -637,10 +632,7 @@
             </div>
           </div>
         </div>
-
-
         <div class="slider-slide">
-
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
               <picture>
@@ -659,9 +651,6 @@
             </div>
           </div>
         </div>
-
-
-
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
@@ -681,66 +670,18 @@
             </div>
           </div>
         </div>
-
-
-
-
-
-
       </div>
-
-
-
-
-
-
-      <!-- Buttons (Not required) -->
+      <!-- Botones Slider -->
       <div class="slider-btn slider-btn-prev"></div>
       <div class="slider-btn slider-btn-next"></div>
-
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="hr">
-    <hr />
-  </div>
+  <div class="hr"><hr /></div>
   <div>
     <h2>Galería</h2>
+  </div><div class="hr"><hr />
   </div>
-  <div class="hr">
-    <hr />
-  </div>
-
-
   <div class="gallery">
-
     <div class="gallery-container">
       <a href="assets/img/original/001.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 1">
         <picture>
@@ -757,8 +698,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/002.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 2">
         <picture>
@@ -775,8 +714,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/003.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 3">
         <picture>
@@ -793,8 +730,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/004.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 4">
         <picture>
@@ -811,8 +746,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/005.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 5">
         <picture>
@@ -829,8 +762,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/006.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 6">
         <picture>
@@ -847,8 +778,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/007.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 7">
         <picture>
@@ -865,8 +794,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/008.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 8">
         <picture>
@@ -883,8 +810,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/009.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 9">
         <picture>
@@ -901,8 +826,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/010.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 10">
         <picture>
@@ -919,8 +842,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/011.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 11">
         <picture>
@@ -937,8 +858,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/012.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 12">
         <picture>
@@ -955,8 +874,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/013.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 13">
         <picture>
@@ -973,8 +890,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/014.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 14">
         <picture>
@@ -991,8 +906,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/015.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 15">
         <picture>
@@ -1009,8 +922,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/016.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 16">
         <picture>
@@ -1027,8 +938,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/017.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 17">
         <picture>
@@ -1045,8 +954,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/018.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 18">
         <picture>
@@ -1063,8 +970,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/019.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 19">
         <picture>
@@ -1081,8 +986,6 @@
         </picture>
       </a>
     </div>
-
-
     <div class="gallery-container">
       <a href="assets/img/original/020.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 20">
         <picture>
@@ -1099,25 +1002,11 @@
         </picture>
       </a>
     </div>
-
-
-
-
-
-
-
-
-
   </div>
-
-
   <div class="hr">
     <hr />
   </div>
-
-
   <footer>
-
     <div class="footer-logo-container">
       <picture>
         <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
@@ -1131,7 +1020,6 @@
         <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
         <img loading="lazy" class="footer-logo-img" src="assets/img/3840px+/logo.png" alt="">
       </picture>
-
     </div>
     <div class="footer-text">Pizzota Pizzería</div>
     <div class="footer-list-container">
@@ -1157,14 +1045,7 @@
           </path>
         </svg></a>
     </div>
-
   </footer>
-
-
-
-
-
-
   <script src="assets/js/lazyembed.min.js"></script>
   <script>
     new LazyEmbed({
@@ -1181,40 +1062,20 @@
       },
     });
   </script>
-
-
-
   <script src="assets/js/simpleSlider.min.js"></script>
-
   <script>
     new SimpleSlider('.slider-1', {
-
       autoplay: true,
-
       loop: true,
-
-
     });
   </script>
-
   <script>
     new SimpleSlider('.slider-2', {
-
       autoplay: true,
-
       loop: true,
-
-
     });
   </script>
-
-
-
-
-
-
   <script src="assets/js/glightbox.min.js"></script>
-
   <script>
     const lightbox = GLightbox({
       loop: true,
@@ -1225,11 +1086,16 @@
       },
     })
   </script>
-
-
-
-
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/OfflineServiceWorker.js', {
+        scope: '/'
+      }).then(function () {
+        console.log('Service Worker registrado correctamente');
+      }, function () {
+        console.log('Error al registrar el Service Worker');
+      });
+    }
+  </script>
 </body>
-
 </html>
