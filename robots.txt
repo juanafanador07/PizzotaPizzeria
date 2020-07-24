@@ -3,4 +3,5 @@ Allow: /
 Allow: /assets/img/original
 Allow: /assets/icon
 Disallow: /assets/img
+Disallow: /menu
 Sitemap:https://pizzotapizzeria.imfast.io/sitemap.xml
