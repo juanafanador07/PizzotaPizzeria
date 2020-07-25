@@ -3,72 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <style>
-       /*-----------Estilos Imagenes----------*/
-   main {
-       text-align: center;
-   }
-
-   /*-----------Estilos Celular----------*/
-
-   @media (max-width: 767px),
-   (orientation: portrait) {
-       /*-----------Estilos Imagenes----------*/
-
-       .menu_imagen {
-           border-top: 0.75em solid #353535;
-           border-bottom: 0.75em solid #353535;
-           width: 45%;
-           margin: 0.25em 1.5%;
-           border-radius: 1em;
-           display: inline-block;
-           background-color: #353535;
-           color: white;
-           font-family: Overpass;
-           font-size: 1.5em;
-       }
-
-       .menu_imagen svg {
-           width: 60%;
-           margin: 0 20%;
-           fill: white;
-       }
-   }
-
-   /*-----------Estilos Desktop----------*/
-   @media (min-width: 768px) and (orientation: landscape) {
-
-       /*-----------Estilos Imagenes----------*/
-
-       .menu_imagen {
-           border-top: 2em solid #353535;
-           border-bottom: 2em solid #353535;
-           width: 30%;
-           margin: 0.5em 1.5%;
-           border-radius: 1.25em;
-           transition-duration: .5s;
-           display: inline-block;
-           background-color: #353535;
-           color: white;
-           font-family: Overpass;
-           font-size: 2em;
-       }
-
-       .menu_imagen:hover {
-           box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.60);
-           transform: scale(1.02);
-           transition-duration: .5s;
-       }
-
-       .menu_imagen svg {
-           width: 50%;
-           margin: 0 25%;
-           fill: white;
-           padding: 0 0 1em 0;
-       }
-
-   }
-  </style>
   <!-- Sitio Web Creado por Juan David Afanador -->
   <!--The following document use the next software-->
   <!--
@@ -87,7 +21,86 @@
   License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1,Code: MIT License)
   -->
   <style>
- 
+    /*-----------Estilos Imagenes----------*/
+    main {
+      text-align: center;
+    }
+
+    /*-----------Estilos Celular----------*/
+
+    @media (max-width: 767px),
+    (orientation: portrait) {
+      /*-----------Estilos Imagenes----------*/
+
+      .menu_imagen {
+        border-top: 0.75em solid #353535;
+        border-bottom: 0.75em solid #353535;
+        width: 45%;
+        margin: 0.25em 1.5%;
+        -webkit-border-radius: 1em;
+        -moz-border-radius: 1em;
+        border-radius: 1em;
+        display: inline-block;
+        background-color: #353535;
+        color: white;
+        font-family: Overpass;
+        font-size: 1.5em;
+      }
+
+      .menu_imagen svg {
+        width: 60%;
+        margin: 0 20%;
+        fill: white;
+      }
+    }
+
+    /*-----------Estilos Desktop----------*/
+    @media (min-width: 768px) and (orientation: landscape) {
+
+      /*-----------Estilos Imagenes----------*/
+
+      .menu_imagen {
+        border-top: 2em solid #353535;
+        border-bottom: 2em solid #353535;
+        width: 30%;
+        margin: 0.5em 1.5%;
+        -webkit-border-radius: 1.25em;
+        -moz-border-radius: 1.25em;
+        border-radius: 1.25em;
+        -webkit-transition-duration: .5s;
+        -moz-transition-duration: .5s;
+        -o-transition-duration: .5s;
+        transition-duration: .5s;
+        display: inline-block;
+        background-color: #353535;
+        color: white;
+        font-family: Overpass;
+        font-size: 2em;
+      }
+
+      .menu_imagen:hover {
+        -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.60);
+        -moz-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.60);
+        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.60);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        transform: scale(1.02);
+        -webkit-transition-duration: .5s;
+        -moz-transition-duration: .5s;
+        -o-transition-duration: .5s;
+        transition-duration: .5s;
+      }
+
+      .menu_imagen svg {
+        width: 50%;
+        margin: 0 25%;
+        fill: white;
+        padding: 0 0 1em 0;
+      }
+
+    }
   </style>
   <noscript>
     <div class="noscript">
@@ -201,7 +214,7 @@
       }
     }
   </script>
-  <title>Pizzota Pizzería | Página Principal</title>
+  <title>Pizzota Pizzería | Menú</title>
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/icon/apple-touch-icon-57x57-precomposed.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/icon/apple-touch-icon-60x60-precomposed.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/icon/apple-touch-icon-72x72-precomposed.png">
@@ -367,7 +380,7 @@
   </script>
   <header>
     <div class="header-logo-container">
-      <a href="https://pizzotapizzeria.imfast.io" target="_self">
+      <a href="/" target="_self">
         <picture>
           <source srcset="/assets/img/3840px+/logo.png" media="(min-width: 3840px)">
           <source srcset="/assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -419,7 +432,7 @@
           </path>
         </svg>
         <span>Página 1</span>
-        </div>
+      </div>
     </a>
     <a class="glightbox main-link" href="assets/img/original/2.jpg">
       <div class="menu_imagen">
@@ -429,7 +442,7 @@
           </path>
         </svg>
         <span>Página 2</span>
-        </div>
+      </div>
     </a>
     <a class="glightbox main-link" href="assets/img/original/3.jpg">
       <div class="menu_imagen">
@@ -439,7 +452,7 @@
           </path>
         </svg>
         <span>Página 3</span>
-        </div>
+      </div>
     </a>
     <a class="glightbox main-link" href="assets/img/original/4.jpg">
       <div class="menu_imagen">
@@ -449,7 +462,7 @@
           </path>
         </svg>
         <span>Página 4</span>
-        </div>
+      </div>
     </a>
     <a class="glightbox main-link" href="assets/img/original/5.jpg">
       <div class="menu_imagen">
@@ -459,7 +472,7 @@
           </path>
         </svg>
         <span>Página 5</span>
-        </div>
+      </div>
     </a>
     <a class="glightbox main-link" href="assets/img/original/6.jpg">
       <div class="menu_imagen">
@@ -469,13 +482,13 @@
           </path>
         </svg>
         <span>Página 6</span>
-        </div>
+      </div>
     </a>
     <hr />
   </main>
   <footer>
     <div class="footer-logo-container">
-      <a href="https://pizzotapizzeria.imfast.io" target="_self">
+      <a href="/" target="_self">
         <picture>
           <source srcset="/assets/img/3840px+/logo.png" media="(min-width: 3840px)">
           <source srcset="/assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
@@ -490,7 +503,7 @@
         </picture>
       </a>
     </div>
-    <div class="footer-text"><a href="https://pizzotapizzeria.imfast.io" target="_self">Pizzota Pizzería</a></div>
+    <div class="footer-text"><a href="/" target="_self">Pizzota Pizzería</a></div>
     <div class="footer-list-container">
       <a href="https://www.facebook.com/pizzotapizzeria" target="_blank" rel="noopener" class="footer-link facebook"
         aria-label="Facebook"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg"
