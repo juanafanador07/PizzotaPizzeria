@@ -32,10 +32,6 @@
 
 .parallax {
   position: relative;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
 }
 
 .logo-container {
@@ -258,6 +254,12 @@
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+    background: url("img/parallax.svg") no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
   .bloque1 {
@@ -541,6 +543,16 @@
 @media (min-width: 768px) and (orientation: landscape) {
 
   /*-----------Estilos Primer Bloque----------*/
+
+  .parallax {
+    background: url("img/parallax.svg") no-repeat fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
   .bloque1 {
     width: 80%;
     display: -webkit-box;
@@ -871,104 +883,5 @@
   footer {
     width: 80%;
     margin: 0 10%;
-  }
-}
-
-@media screen and (min-width: 3840px) {
-  .parallax {
-    background: url("img/3840px+/parallax.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 2048px) and (max-width: 3839px) {
-  .parallax {
-    background: url("img/2048px-3839px/parallax.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 1920px) and (max-width: 2047px) {
-  .parallax {
-    background: url("img/1920px-2047px/parallax.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .parallax {
-    background: url("img/1440px-1919px/parallax.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .parallax {
-    background: url("img/1024px-1439px/parallax.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .parallax {
-    background: url("img/768px-1023px/parallax.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 425px) and (max-width: 767px) {
-  .parallax {
-    background: url("img/425px-767px/parallax.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 375px) and (max-width: 424px) {
-  .parallax {
-    background: url("img/375px-424px/parallax.jpg");
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media screen and (max-width: 374px) {
-  .parallax {
-    background: url("img/374px-/parallax.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
 }

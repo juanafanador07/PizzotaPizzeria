@@ -328,18 +328,7 @@
   <header>
     <div class="header-logo-container">
       <a href="/" target="_self">
-        <picture>
-          <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
-          <img loading="lazy" class="header-logo-img" src="assets/img/3840px+/logo.png" alt="">
-        </picture>
+        <img loading="lazy" src="assets/img/logo.svg" class="header-logo-img" alt="">
       </a>
     </div>
     <div class="header-list-container">
@@ -375,18 +364,7 @@
           ciudad.</p>
       </div>
       <div class="logo-container">
-        <picture>
-          <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
-          <img loading="lazy" class="logo" src="assets/img/3840px+/logo.png" alt="">
-        </picture>
+        <img loading="lazy" src="assets/img/logo.svg" class="logo" alt="">
       </div>
     </div>
   </div>
@@ -1018,19 +996,8 @@
   <footer>
     <div class="footer-logo-container">
       <a href="/" target="_self">
-      <picture>
-        <source srcset="assets/img/3840px+/logo.png" media="(min-width: 3840px)">
-        <source srcset="assets/img/2048px-3839px/logo.png" media="(min-width: 2048px) and (max-width: 3839px)">
-        <source srcset="assets/img/1920px-2047px/logo.png" media="(min-width: 1920px) and (max-width: 2047px)">
-        <source srcset="assets/img/1440px-1919px/logo.png" media="(min-width: 1440px) and (max-width: 1919px)">
-        <source srcset="assets/img/1024px-1439px/logo.png" media="(min-width: 1024px) and (max-width: 1439px)">
-        <source srcset="assets/img/768px-1023px/logo.png" media="(min-width: 786px) and (max-width: 1023px)">
-        <source srcset="assets/img/425px-767px/logo.png" media="(min-width: 425px) and (max-width: 767px)">
-        <source srcset="assets/img/375px-424px/logo.png" media="(min-width: 375px) and (max-width: 424px)">
-        <source srcset="assets/img/374px-/logo.png" media="(max-width: 374px)">
-        <img loading="lazy" class="footer-logo-img" src="assets/img/3840px+/logo.png" alt="">
-      </picture>
-    </a>
+        <img loading="lazy" src="assets/img/logo.svg" class="footer-logo-img" alt="">
+      </a>
     </div>
     <div class="footer-text"><a href="/" target="_self">Pizzota Pizzería</a></div>
     <div class="footer-list-container">
@@ -1097,16 +1064,18 @@
       },
     })
     window.addEventListener("scroll", addcss);
+
     function addcss() {
       if (window.scrollY > 0) {
-      var head = document.getElementsByTagName('HEAD')[0];
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = '/assets/css/glightbox.css';
-      head.appendChild(link);
-      window.removeEventListener("scroll", addcss);
-    }}
+        var head = document.getElementsByTagName('HEAD')[0];
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/assets/css/glightbox.css';
+        head.appendChild(link);
+        window.removeEventListener("scroll", addcss);
+      }
+    }
   </script>
   <script>
     if ('serviceWorker' in navigator) {
