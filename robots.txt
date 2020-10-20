@@ -3,5 +3,7 @@ Allow: /
 Allow: /assets/img/original
 Allow: /assets/icon
 Disallow: /assets/img
+Allow: /assets/img/logo.svg
+Allow: /assets/img/parallax.svg
 Disallow: /menu
 Sitemap: https://pizzotapizzeria.netlify.app/sitemap.xml
