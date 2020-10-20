@@ -222,6 +222,8 @@
     .numero {
       margin: 0;
       text-align: center;
+      align-items: center;
+      justify-content: center;
     }
 
     .numero span {
@@ -229,7 +231,7 @@
       font-weight: bold;
     }
 
-    .numero img {
+    .numero-img {
       position: relative;
     }
 
@@ -265,16 +267,17 @@
 
       .numero {
         width: 49.5%;
-        display: inline-block;
+        display: inline-flex;
       }
 
       .numero span {
         font-size: 8em;
       }
 
-      .numero img {
-        height: 8em;
-        top: 1em;
+      .numero-img {
+        top: -1rem;
+        height: 12vw;
+        width: 12vw;
       }
 
       p {
@@ -310,16 +313,17 @@
       }
 
       .numero {
-        display: block;
+        display: flex;
       }
 
       .numero span {
         font-size: 5em;
       }
 
-      .numero img {
-        height: 5em;
-        top: 0.5em;
+      .numero-img {
+        height: 5rem;
+        width: 5rem;
+        top: -.5rem;
       }
 
       p {
@@ -553,13 +557,45 @@
     <span class="numero-texto">Error </span>
     <div class="numero">
       <span>4</span>
-      <img class="numero-img" src="/404/pizza.png" alt="0">
+      <img class="numero-img script" data-src="404/pizza-error" alt="0">
+      <noscript>
+        <style>
+          .script{
+            display: none;
+          }
+        </style>
+        <img class="numero-img" src="/404/pizza-error.png" alt="0">
+      </noscript>
       <span>4</span>
     </div>
     <p>La página que estás buscando no existe</p>
-    <div class="link-home"><a href="/" target="_self" aria-label="Página Principal"><span>Volver a la página principal</span></a></div>
+    <div class="link-home"><a href="/" target="_self" aria-label="Página Principal"><span>Volver a la página
+          principal</span></a></div>
   </main>
   <script>
+    /*Img conversion*/
+
+    function showImgs() {
+      let imgs = document.querySelectorAll('img[data-src]');
+
+      imgs.forEach(function (img) {
+        let width = img.width;
+        var pixelRatio = window.devicePixelRatio;
+        if (width != 0) {
+          img.src = 'https://res.cloudinary.com/juanafanador07/c_fit,f_auto,q_auto:best,w_' + Math.ceil(width *
+            pixelRatio) + '/pizzotapizzeria/assets/img/' + img.dataset.src;
+          console.log(img.src);
+        }
+      });
+    }
+
+    showImgs();
+    
+
+    window.addEventListener("resize", showImgs);
+
+    /*Service Worker*/
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/OfflineServiceWorker.js', {
         scope: '/'

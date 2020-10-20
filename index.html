@@ -16,16 +16,6 @@
   https://raw.githubusercontent.com/michu2k/SimpleSlider/master/LICENSE
   -->
   <!--
-  LazyEmbed v1.1.7
-  LazyEmbed is a JavaScript library for loading embeds and individual content on click.
-  https://github.com/futape/lazyembed
-
-  Copyright 2018 Lucas Krause
-  Published under MIT License
-  License at
-  https://raw.githubusercontent.com/futape/lazyembed/master/LICENSE
-  -->
-  <!--
   glightbox v3.0.0
   glightbox is a pure javascript lightbox. It can display images, iframes, inline content and videos with optional autoplay for YouTube, Vimeo and even self hosted videos.
   https://github.com/biati-digital/glightbox
@@ -50,6 +40,10 @@
       <p>Debes activar JavaScript en tu navegador visualizar esta página correctamente</p>
     </div>
     <style>
+      .script {
+        display: none !important;
+      }
+
       @media (min-width: 768px) and (orientation: landscape) {
         .noscript {
           width: 100%;
@@ -387,25 +381,16 @@
         <hr />
       </div>
     </div>
-    <div class="mapa-container">
-      <div class="iframe-responsive" id="iframe-responsive"><iframe title="Ubicación" class="mapa-iframe" data-lazyembed
-          data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcywKcxXeMZiMwLDcLgyEnNglcLOyB_qw&q=Pizzota%20C%C3%B9cuta&zoom=17"
-          data-placeholder="assets/img/original/mapa.jpg" allowfullscreen></iframe></div>
-    </div>
+    <div class="mapa-container script">
+      <iframe title="Ubicación" class="mapa-iframe"
+        data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcywKcxXeMZiMwLDcLgyEnNglcLOyB_qw&q=Pizzota%20C%C3%B9cuta&zoom=17"
+        allowfullscreen></iframe></div>
   </div>
   <a href="assets/img/original/frente.jpg" class="glightbox" aria-label="Nuestro punto de venta">
-    <picture>
-      <source srcset="assets/img/3840px+/frente.jpg" media="(min-width: 3840px)">
-      <source srcset="assets/img/2048px-3839px/frente.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-      <source srcset="assets/img/1920px-2047px/frente.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-      <source srcset="assets/img/1440px-1919px/frente.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-      <source srcset="assets/img/1024px-1439px/frente.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-      <source srcset="assets/img/768px-1023px/frente.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-      <source srcset="assets/img/425px-767px/frente.jpg" media="(min-width: 425px) and (max-width: 767px)">
-      <source srcset="assets/img/375px-424px/frente.jpg" media="(min-width: 375px) and (max-width: 424px)">
-      <source srcset="assets/img/374px-/frente.jpg" media="(max-width: 374px)">
-      <img loading="lazy" class="frente-img" src="assets/img/3840px+/frente.jpg" alt="">
-    </picture>
+    <img loading="lazy" class="frente-img script" data-src="assets/img/frente.jpg" alt="">
+    <noscript>
+      <img loading="lazy" class="frente-img" src="assets/img/frente.jpg" alt="">
+    </noscript>
   </a>
   <div class="hr">
     <hr />
@@ -435,48 +420,24 @@
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
-              <picture>
-                <source srcset="assets/img/3840px+/01.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/01.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/01.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/01.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/01.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/01.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/01.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/01.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/01.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/01.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0006.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0006.jpg" alt="">
+              </noscript>
               <p>Pizzas</p>
             </div>
             <div class="slider-container-data slider-container-data-3">
-              <picture>
-                <source srcset="assets/img/3840px+/02.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/02.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/02.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/02.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/02.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/02.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/02.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/02.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/02.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/02.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0002.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0002.jpg" alt="">
+              </noscript>
               <p>Perros Calientes</p>
             </div>
             <div class="slider-container-data slider-container-data-2">
-              <picture>
-                <source srcset="assets/img/3840px+/03.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/03.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/03.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/03.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/03.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/03.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/03.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/03.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/03.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/03.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0004.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0004.jpg" alt="">
+              </noscript>
               <p>Hamburguesas</p>
             </div>
           </div>
@@ -485,48 +446,24 @@
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
-              <picture>
-                <source srcset="assets/img/3840px+/04.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/04.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/04.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/04.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/04.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/04.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/04.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/04.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/04.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/04.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0008.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0008.jpg" alt="">
+              </noscript>
               <p>Salchipapas</p>
             </div>
             <div class="slider-container-data slider-container-data-3">
-              <picture>
-                <source srcset="assets/img/3840px+/05.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/05.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/05.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/05.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/05.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/05.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/05.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/05.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/05.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/05.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0018.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0018.jpg" alt="">
+              </noscript>
               <p>Jugos Naturales</p>
             </div>
             <div class="slider-container-data slider-container-data-2">
-              <picture>
-                <source srcset="assets/img/3840px+/06.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/06.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/06.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/06.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/06.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/06.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/06.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/06.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/06.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/06.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0010.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0010.jpg" alt="">
+              </noscript>
               <p>Malteadas</p>
             </div>
           </div>
@@ -542,18 +479,10 @@
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
-              <picture>
-                <source srcset="assets/img/3840px+/01.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/01.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/01.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/01.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/01.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/01.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/01.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/01.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/01.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/01.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0006.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0006.jpg" alt="">
+              </noscript>
               <p>Pizzas</p>
             </div>
           </div>
@@ -561,18 +490,10 @@
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
-              <picture>
-                <source srcset="assets/img/3840px+/02.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/02.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/02.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/02.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/02.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/02.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/02.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/02.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/02.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/02.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0002.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0002.jpg" alt="">
+              </noscript>
               <p>Perros Calientes</p>
             </div>
           </div>
@@ -580,18 +501,10 @@
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
-              <picture>
-                <source srcset="assets/img/3840px+/03.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/03.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/03.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/03.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/03.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/03.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/03.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/03.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/03.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/03.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0004.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0004.jpg" alt="">
+              </noscript>
               <p>Hamburguesas</p>
             </div>
           </div>
@@ -599,18 +512,10 @@
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
-              <picture>
-                <source srcset="assets/img/3840px+/04.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/04.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/04.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/04.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/04.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/04.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/04.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/04.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/04.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/04.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0008.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0008.jpg" alt="">
+              </noscript>
               <p>Salchipapas</p>
             </div>
           </div>
@@ -618,18 +523,10 @@
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
-              <picture>
-                <source srcset="assets/img/3840px+/05.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/05.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/05.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/05.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/05.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/05.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/05.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/05.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/05.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/05.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0018.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0018.jpg" alt="">
+              </noscript>
               <p>Jugos Naturales</p>
             </div>
           </div>
@@ -637,18 +534,10 @@
         <div class="slider-slide">
           <div class="slider-container">
             <div class="slider-container-data slider-container-data-1">
-              <picture>
-                <source srcset="assets/img/3840px+/06.jpg" media="(min-width: 3840px)">
-                <source srcset="assets/img/2048px-3839px/06.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-                <source srcset="assets/img/1920px-2047px/06.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-                <source srcset="assets/img/1440px-1919px/06.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-                <source srcset="assets/img/1024px-1439px/06.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-                <source srcset="assets/img/768px-1023px/06.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-                <source srcset="assets/img/425px-767px/06.jpg" media="(min-width: 425px) and (max-width: 767px)">
-                <source srcset="assets/img/375px-424px/06.jpg" media="(min-width: 375px) and (max-width: 424px)">
-                <source srcset="assets/img/374px-/06.jpg" media="(max-width: 374px)">
-                <img loading="lazy" class="slider-container-img" src="assets/img/3840px+/06.jpg" alt="">
-              </picture>
+              <img loading="lazy" class="slider-container-img script" data-src="assets/img/0010.jpg" alt="">
+              <noscript>
+                <img loading="lazy" class="slider-container-img" src="assets/img/0010.jpg" alt="">
+              </noscript>
               <p>Malteadas</p>
             </div>
           </div>
@@ -671,322 +560,162 @@
   <div class="gallery">
     <div class="gallery-container">
       <a href="assets/img/original/001.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 1">
-        <picture>
-          <source srcset="assets/img/3840px+/0001.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0001.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0001.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0001.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0001.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0001.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0001.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0001.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0001.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0001.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0001" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0001.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/002.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 2">
-        <picture>
-          <source srcset="assets/img/3840px+/0002.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0002.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0002.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0002.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0002.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0002.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0002.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0002.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0002.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0002.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0002" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0002.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/003.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 3">
-        <picture>
-          <source srcset="assets/img/3840px+/0003.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0003.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0003.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0003.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0003.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0003.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0003.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0003.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0003.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0003.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0003" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0003.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/004.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 4">
-        <picture>
-          <source srcset="assets/img/3840px+/0004.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0004.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0004.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0004.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0004.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0004.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0004.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0004.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0004.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0004.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0004" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0004.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/005.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 5">
-        <picture>
-          <source srcset="assets/img/3840px+/0005.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0005.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0005.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0005.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0005.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0005.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0005.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0005.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0005.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0005.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0005" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0005.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/006.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 6">
-        <picture>
-          <source srcset="assets/img/3840px+/0006.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0006.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0006.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0006.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0006.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0006.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0006.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0006.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0006.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0006.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0006" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0006.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/007.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 7">
-        <picture>
-          <source srcset="assets/img/3840px+/0007.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0007.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0007.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0007.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0007.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0007.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0007.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0007.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0007.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0007.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0007" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0007.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/008.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 8">
-        <picture>
-          <source srcset="assets/img/3840px+/0008.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0008.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0008.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0008.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0008.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0008.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0008.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0008.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0008.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0008.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0008" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0008.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/009.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 9">
-        <picture>
-          <source srcset="assets/img/3840px+/0009.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0009.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0009.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0009.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0009.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0009.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0009.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0009.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0009.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0009.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0009" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0009.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/010.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 10">
-        <picture>
-          <source srcset="assets/img/3840px+/0010.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0010.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0010.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0010.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0010.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0010.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0010.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0010.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0010.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0010.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0010" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0010.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/011.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 11">
-        <picture>
-          <source srcset="assets/img/3840px+/0011.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0011.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0011.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0011.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0011.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0011.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0011.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0011.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0011.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0011.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0011" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0011.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/012.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 12">
-        <picture>
-          <source srcset="assets/img/3840px+/0012.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0012.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0012.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0012.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0012.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0012.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0012.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0012.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0012.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0012.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0012" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0012.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/013.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 13">
-        <picture>
-          <source srcset="assets/img/3840px+/0013.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0013.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0013.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0013.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0013.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0013.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0013.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0013.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0013.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0013.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0013" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0013.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/014.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 14">
-        <picture>
-          <source srcset="assets/img/3840px+/0014.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0014.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0014.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0014.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0014.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0014.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0014.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0014.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0014.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0014.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0014" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0014.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/015.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 15">
-        <picture>
-          <source srcset="assets/img/3840px+/0015.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0015.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0015.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0015.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0015.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0015.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0015.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0015.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0015.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0015.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0015" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0015.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/016.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 16">
-        <picture>
-          <source srcset="assets/img/3840px+/0016.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0016.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0016.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0016.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0016.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0016.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0016.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0016.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0016.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0016.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0016" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0016.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/017.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 17">
-        <picture>
-          <source srcset="assets/img/3840px+/0017.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0017.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0017.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0017.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0017.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0017.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0017.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0017.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0017.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0017.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0017" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0017.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/018.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 18">
-        <picture>
-          <source srcset="assets/img/3840px+/0018.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0018.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0018.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0018.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0018.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0018.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0018.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0018.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0018.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0018.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0018" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0018.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/019.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 19">
-        <picture>
-          <source srcset="assets/img/3840px+/0019.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0019.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0019.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0019.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0019.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0019.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0019.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0019.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0019.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0019.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0019" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0019.jpg" alt="">
+        </noscript>
       </a>
     </div>
     <div class="gallery-container">
       <a href="assets/img/original/020.jpg" class="glightbox" data-gallery="gallery1" aria-label="Imagen 20">
-        <picture>
-          <source srcset="assets/img/3840px+/0020.jpg" media="(min-width: 3840px)">
-          <source srcset="assets/img/2048px-3839px/0020.jpg" media="(min-width: 2048px) and (max-width: 3839px)">
-          <source srcset="assets/img/1920px-2047px/0020.jpg" media="(min-width: 1920px) and (max-width: 2047px)">
-          <source srcset="assets/img/1440px-1919px/0020.jpg" media="(min-width: 1440px) and (max-width: 1919px)">
-          <source srcset="assets/img/1024px-1439px/0020.jpg" media="(min-width: 1024px) and (max-width: 1439px)">
-          <source srcset="assets/img/768px-1023px/0020.jpg" media="(min-width: 786px) and (max-width: 1023px)">
-          <source srcset="assets/img/425px-767px/0020.jpg" media="(min-width: 425px) and (max-width: 767px)">
-          <source srcset="assets/img/375px-424px/0020.jpg" media="(min-width: 375px) and (max-width: 424px)">
-          <source srcset="assets/img/374px-/0020.jpg" media="(max-width: 374px)">
-          <img loading="lazy" class="gallery-img" src="assets/img/3840px+/0020.jpg" alt="">
-        </picture>
+        <img loading="lazy" class="gallery-img script" data-src="assets/img/0020" alt="">
+        <noscript>
+          <img loading="lazy" class="gallery-img" src="assets/img/0020.jpg" alt="">
+        </noscript>
       </a>
     </div>
   </div>
@@ -1024,22 +753,6 @@
         </svg></a>
     </div>
   </footer>
-  <script src="assets/js/lazyembed.js"></script>
-  <script>
-    new LazyEmbed({
-      elements: '[data-lazyembed]',
-      overlayText: '<svg aria-hidden="true" fill="currentColor"focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z"></path></svg><br/><span>Toca para cargar el mapa</span>',
-      adoptResponsiveEmbed: true,
-      excludeElements: 'a',
-      classes: {
-        root: 'lazyembed iframe-container',
-        overlay: 'lazyembed__overlay',
-        text: 'lazyembed__text',
-        placeholder: 'lazyembed__placeholder',
-        embed: 'lazyembed__embed iframe'
-      },
-    });
-  </script>
   <script src="assets/js/simpleSlider.js"></script>
   <script>
     new SimpleSlider('.slider-1', {
@@ -1063,21 +776,48 @@
         prev: '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 512" class="svg-inline--fa fa-chevron-left fa-w-8 fa-3x"><path fill="#fff" d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z"></path></svg>'
       },
     })
-    window.addEventListener("scroll", addcss);
 
-    function addcss() {
-      if (window.scrollY > 0) {
-        var head = document.getElementsByTagName('HEAD')[0];
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = '/assets/css/glightbox.css';
-        head.appendChild(link);
-        window.removeEventListener("scroll", addcss);
-      }
-    }
+    var head = document.getElementsByTagName('HEAD')[0];
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = '/assets/css/glightbox.css';
+    head.appendChild(link);
   </script>
   <script>
+
+    /*Img conversion*/
+
+    function showImgs() {
+      let imgs = document.querySelectorAll('img[data-src]');
+
+      imgs.forEach(function (img) {
+        let width = img.getBoundingClientRect().width;
+        var pixelRatio = window.devicePixelRatio;
+        if (width != 0) {
+          img.src = 'https://res.cloudinary.com/juanafanador07/c_fit,f_auto,q_auto:best,w_' + Math.ceil(width *
+            pixelRatio) + '/pizzotapizzeria/' + img.dataset.src;
+          console.log(img.src);
+        }
+      });
+    }
+
+    showImgs();
+
+    window.addEventListener("resize", showImgs);
+
+
+    /*Show iframe*/
+    function showIframe() {
+      let iframe = document.querySelector(".mapa-iframe");
+      iframe.src = iframe.dataset.src;
+      window.removeEventListener("scroll", showIframe);
+    }
+
+    window.addEventListener("scroll", showIframe);
+
+
+    /*Service worker registration*/
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/OfflineServiceWorker.js', {
         scope: '/'

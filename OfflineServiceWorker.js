@@ -3,7 +3,7 @@ var cached_urls = [
   '/index.html',
   '/menu/index.html',
   '/404/index.html',
-  '/404/pizza.png'
+  '/404/pizza-error.png'
 ];
 
 self.addEventListener('install', function(event) {

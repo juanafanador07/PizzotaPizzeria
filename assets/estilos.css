@@ -303,10 +303,6 @@
     width: 100%;
   }
 
-  .mapa-container {
-    width: 100%;
-  }
-
   .datos-titulo {
     margin: 0 10%;
     width: 80%;
@@ -324,99 +320,26 @@
     width: 80%;
   }
 
-  .iframe-container {
+  .mapa-container {
     height: 120vw;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
+    position: relative;
+    overflow: hidden;
+    padding-top: 0%;
     overflow: hidden;
     width: 90%;
     margin: 0.938em 5%;
   }
 
-  .iframe {
-    height: 100%;
-    width: 100%;
-    border: none;
-    -webkit-border-radius: 1.250em;
-    -moz-border-radius: 1.250em;
-    border-radius: 1.250em;
-  }
-
-  /*-----------Estilos Iframe----------*/
-  .lazyembed {
-    z-index: 0;
-  }
-
-  .lazyembed:not(.embed-responsive-item) {
-    position: relative;
-    display: inline-block;
-    line-height: 0;
-  }
-
-  .lazyembed:not(.embed-responsive-item) .lazyembed__text {
-    line-height: 1;
-  }
-
-  .lazyembed__placeholder {
+  .mapa-iframe{
     position: absolute;
-    z-index: 1;
-    left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    -webkit-border-radius: 1.250em;
-    -moz-border-radius: 1.250em;
-    border-radius: 1.250em;
-  }
-
-  .lazyembed__overlay {
-    position: absolute;
-    z-index: 2;
     left: 0;
-    top: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
-    -webkit-border-radius: 1.250em;
-    -moz-border-radius: 1.250em;
     border-radius: 1.250em;
-  }
-
-  .lazyembed__text {
-    position: absolute;
-    left: 1rem;
-    right: 1rem;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    color: #fff;
-    font-size: 1.25em;
-    font-family: 'Overpass', sans-serif;
-  }
-
-  .lazyembed__text svg {
-    width: 6em;
-    height: 4em;
-    margin: 0.625em;
   }
 
   /*-----------Estilos Frente----------*/
@@ -598,9 +521,26 @@
   }
 
   .mapa-container {
-    width: 50%;
+    height: 25vw;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    padding-top: 0%;
+    overflow: hidden;
+    width: 45%;
+    margin: 0.938em 2.5%;
   }
 
+  .mapa-iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.250em;
+  }
   .datos-titulo {
     width: 100%;
   }
