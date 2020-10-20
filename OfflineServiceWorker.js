@@ -2,7 +2,7 @@ var cache_name = 'OfflineCache';
 var cached_urls = [
   '/index.html',
   '/menu/index.html',
-  '/404/404.html',
+  '/404/index.html',
   '/404/pizza.png'
 ];
 
@@ -40,7 +40,7 @@ self.addEventListener('fetch', function(event) {
         console.log('Network request for ', event.request.url);
         return fetch(event.request).then(function(response) {
           if (response.status === 404) {
-            return caches.match('/404/404.html');
+            return caches.match('/404');
           }
           return caches.open(cached_urls).then(function(cache) {
            cache.put(event.request.url, response.clone());
